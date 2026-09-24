@@ -1,0 +1,245 @@
+:root{
+  --bg:#07121a;
+  --bg-2:#0a1b27;
+  --surface:#0d2230;
+  --surface-2:#102c3c;
+  --text:#fff8eb;
+  --muted:#c9c0b0;
+  --gold:#e7bd61;
+  --gold-2:#ffd985;
+  --line:rgba(231,189,97,.28);
+  --navy:#082031;
+  --blue:#2f6f9f;
+  --green:#628d64;
+  --cream:#f6eddb;
+  --paper:#fffaf0;
+  --ink:#17212a;
+  --radius:24px;
+  --shadow:0 28px 80px rgba(0,0,0,.34);
+  --max:1180px;
+}
+html[data-theme="light"]{
+  --bg:#f6f0e4;
+  --bg-2:#eee5d5;
+  --surface:#fffaf1;
+  --surface-2:#f3eadb;
+  --text:#1e2a32;
+  --muted:#665f56;
+  --line:rgba(145,103,32,.22);
+  --navy:#f6f0e4;
+  --shadow:0 24px 70px rgba(77,56,22,.13);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .25s ease,color .25s ease}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.container{width:min(var(--max),calc(100% - 36px));margin:auto}p{margin:0}
+h1,h2,h3,blockquote{font-family:Georgia,"Times New Roman",serif;line-height:1.08;margin:0}.muted{color:var(--muted)}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--gold);font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.18em}.kicker::before{content:"";width:24px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}.rtl .kicker::before{background:linear-gradient(270deg,var(--gold),transparent)}
+.site-header{position:sticky;top:0;z-index:80;background:rgba(6,19,29,.9);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(14px)}html[data-theme="light"] .site-header{background:rgba(250,245,235,.92);border-color:rgba(76,55,23,.12)}
+.nav{min-height:70px;display:flex;align-items:center;gap:20px}.brand{display:flex;align-items:center;gap:10px;margin-right:auto}.rtl .brand{margin-right:0;margin-left:auto}.brand-emblem{width:36px;height:36px;border:1px solid var(--gold);display:grid;place-items:center;border-radius:12px;color:var(--gold);transform:rotate(45deg);font-size:.9rem}.brand-emblem::first-letter{transform:rotate(-45deg)}.brand-copy{display:flex;flex-direction:column;line-height:1}.brand strong{font-family:Georgia,serif;font-size:1.08rem;letter-spacing:.04em}.brand-copy>span{margin-top:6px;color:var(--gold);font-size:.66rem;letter-spacing:.26em;text-transform:uppercase}
+nav{display:flex;gap:20px;align-items:center}nav a{font-size:.92rem;color:var(--muted);position:relative;padding:12px 0}nav a::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:1px;background:var(--gold);transform:scaleX(0);transition:.2s}nav a:hover,nav a.active{color:var(--text)}nav a:hover::after,nav a.active::after{transform:scaleX(1)}
+.nav-tools{display:flex;align-items:center;gap:9px}.lang-switch{display:flex;gap:6px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;font-size:.78rem;color:var(--muted)}.lang-switch .current,.lang-switch a:hover{color:var(--text)}.theme-toggle{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer;font-size:1rem}.menu-btn{display:none;background:transparent;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:8px 11px}
+.hero-home{position:relative;min-height:575px;display:grid;align-items:center;overflow:hidden;background-image:url("images/deen-hero-art.png");background-size:cover;background-position:center}.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,19,30,.88) 0%,rgba(5,19,30,.72) 36%,rgba(5,19,30,.12) 68%,rgba(5,19,30,.06) 100%)}html[data-theme="light"] .hero-shade{background:linear-gradient(90deg,rgba(255,248,236,.93) 0%,rgba(255,248,236,.75) 34%,rgba(255,248,236,.12) 68%,rgba(255,248,236,.05) 100%)}
+.hero-inner{position:relative;z-index:2;padding:88px 0 76px;max-width:720px}.hero h1{font-size:clamp(2.9rem,6.3vw,5.6rem);letter-spacing:-.035em;color:var(--text);text-shadow:0 16px 40px rgba(0,0,0,.24)}.gold-word{color:var(--gold-2)}html[data-theme="light"] .gold-word{color:#9c6b14}.lead{margin-top:18px;max-width:680px;color:var(--muted);font-size:clamp(1rem,1.6vw,1.18rem)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line);font-weight:800;transition:.2s;box-shadow:0 10px 25px rgba(0,0,0,.12)}.btn:hover{transform:translateY(-2px)}.btn.primary{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#1f1a0d;border-color:transparent}.btn.glass,.btn.secondary{background:rgba(7,27,41,.54);color:#fff8eb;border-color:rgba(255,255,255,.22);backdrop-filter:blur(8px)}html[data-theme="light"] .btn.glass,html[data-theme="light"] .btn.secondary{background:rgba(255,255,255,.7);color:#1e2a32;border-color:rgba(103,76,33,.18)}
+.steps-strip{padding:20px 0;background:#082131;border-top:1px solid rgba(231,189,97,.34);border-bottom:1px solid rgba(231,189,97,.34);color:#fff8eb}html[data-theme="light"] .steps-strip{background:#f0e5d1;color:#202b34}.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.step-card{display:flex;align-items:center;gap:16px;padding:8px 4px}.step-num{flex:0 0 auto;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#1e1809;font-family:Georgia,serif;font-size:1.25rem;font-weight:700}.step-card strong{display:block;font-family:Georgia,serif;font-size:1.15rem}.step-card span:last-child{display:block;color:#cfc8bc;font-size:.9rem;margin-top:4px}html[data-theme="light"] .step-card span:last-child{color:#5f584f}
+section{padding:68px 0}.series-section{position:relative;overflow:hidden;background:var(--bg-2)}.series-section::before,.mission-band::before{content:"";position:absolute;inset:0;background:url("images/deen-hero-art.png") center/cover no-repeat;opacity:.08;filter:saturate(.8)}html[data-theme="light"] .series-section::before{opacity:.06}.series-section>.container,.mission-band>.container{position:relative;z-index:1}.section-title-center{text-align:center;margin-bottom:28px}.section-title-center h2{font-size:clamp(2rem,4vw,3.35rem);margin-top:10px}.section-title-center p{margin-top:12px;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;color:var(--gold)}
+.series-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.series-card{min-height:360px;border-radius:22px;overflow:hidden;position:relative;border:1px solid var(--line);box-shadow:var(--shadow);background-image:linear-gradient(180deg,rgba(5,15,23,.16),rgba(5,15,23,.95)),url("images/deen-hero-art.png");background-size:cover;background-position:center;transition:.25s}.series-card:hover{transform:translateY(-7px)}.series-quran{background-position:65% center;box-shadow:0 24px 65px rgba(49,89,47,.24)}.series-seerah{background-position:95% center;box-shadow:0 24px 65px rgba(32,85,126,.25)}.series-hadith{box-shadow:0 24px 65px rgba(152,103,28,.25)}.series-card::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,15,23,.92) 15%,transparent 70%)}.series-hadith::before,.series-quran::before,.series-seerah::before{content:"";position:absolute;inset:0;mix-blend-mode:color;opacity:.46}.series-hadith::before{background:#b57618}.series-quran::before{background:#4b7d54}.series-seerah::before{background:#2e6f9d}.series-card-content{position:absolute;z-index:2;left:24px;right:24px;bottom:24px;color:#fff8eb}.rtl .series-card-content{text-align:right}.series-label{display:inline-block;border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:5px 9px;font-size:.72rem;color:#f7dfaa}.series-card h3{font-size:1.78rem;margin-top:11px}.series-card p{margin-top:9px;color:#ddd4c5;font-size:.92rem}.series-link{display:inline-block;margin-top:18px;font-weight:800;color:#ffe19a}
+.workbook-showcase{background:var(--cream);color:var(--ink);position:relative;overflow:hidden}.workbook-showcase::before,.workbook-showcase::after{content:"";position:absolute;width:280px;height:280px;background:url("images/deen-hero-art.png") center/cover no-repeat;opacity:.16;border-radius:40px;filter:saturate(.8)}.workbook-showcase::before{left:-120px;top:-110px}.workbook-showcase::after{right:-120px;bottom:-120px}.workbook-showcase .container{position:relative;z-index:1}.section-head{display:flex;align-items:end;justify-content:space-between;gap:26px;margin-bottom:26px}.section-head h2{font-size:clamp(1.9rem,4vw,3.15rem);margin-top:8px}.section-head p{max-width:600px;color:#625d54}.preview-row{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr 1.12fr);
+  gap:14px;
+  align-items:stretch;
+}.mini-book,.mini-page{min-height:245px;border-radius:14px;box-shadow:0 18px 45px rgba(78,57,24,.16);border:1px solid rgba(127,91,29,.16)}.mini-book{display:flex;flex-direction:column;justify-content:flex-end;padding:18px;background-color:#efe3c9;background-image:linear-gradient(180deg,rgba(255,255,255,.25),rgba(0,0,0,.13)),url("images/deen-hero-art.png");background-size:cover}.mini-book span{font-family:Georgia,serif;font-size:1.35rem}.mini-book small{text-transform:uppercase;letter-spacing:.18em;margin-top:6px}.book-gold{background-position:90% 10%}.book-green{background-position:64% 35%;filter:hue-rotate(20deg)}.book-blue{background-position:10% 90%;filter:hue-rotate(185deg)}.mini-page{padding:18px;background:#fffdf7}.mini-page strong,.mini-page span{display:block}.mini-page span{font-size:.78rem;margin-top:16px;color:#776d60}.mini-page i{display:block;height:1px;background:#d8cfbf;margin-top:10px}
+.membership-section{background:var(--bg)}.membership-panel{display:grid;grid-template-columns:1.15fr 1fr auto;gap:24px;align-items:center;padding:28px;border-radius:26px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(14,46,63,.96),rgba(6,25,38,.96));box-shadow:var(--shadow);color:#fff8eb}html[data-theme="light"] .membership-panel{background:linear-gradient(135deg,#0e3447,#0b2433);color:#fff8eb}.membership-panel h2{font-size:clamp(1.9rem,3.6vw,2.75rem);margin-top:8px}.membership-panel p{margin-top:10px;color:#d5ccbd}.membership-benefits{display:grid;gap:9px;color:#e4d9c8}.membership-benefits span{font-size:.92rem}.mission-band{position:relative;overflow:hidden;padding:58px 0;background:#071b28;color:#fff8eb}.mission-band::before{opacity:.18;background-position:center bottom}.mission-inner{text-align:center}.mission-inner blockquote{font-size:clamp(1.8rem,3.5vw,2.7rem);margin:18px auto 14px;max-width:760px}.mission-inner>span{font-size:.75rem;text-transform:uppercase;letter-spacing:.22em;color:var(--gold)}
+.page-hero{padding:92px 0 54px;background:linear-gradient(180deg,var(--bg-2),var(--bg));border-bottom:1px solid var(--line);position:relative;overflow:hidden}.page-hero::after{content:"";position:absolute;inset:0;background:url("images/deen-hero-art.png") right center/55% auto no-repeat;opacity:.13;pointer-events:none}.page-hero>.container{position:relative;z-index:1}.page-hero h1{font-size:clamp(2.8rem,7vw,5.5rem);margin-top:10px}.panel,.resource,.quiz-question{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow)}.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.badge,.free-pill{display:inline-flex;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--gold-2);font-size:.78rem}.watch-layout{display:grid;grid-template-columns:1.35fr .65fr;gap:22px}.episode-header{display:flex;justify-content:space-between;gap:22px;align-items:flex-start;margin-bottom:26px}.episode-header h2{font-size:clamp(2rem,4vw,3.5rem)}.video-shell{aspect-ratio:16/9;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#061019;box-shadow:var(--shadow)}.video-placeholder{height:100%;display:grid;place-items:center;align-content:center;gap:10px;background:radial-gradient(circle at 50% 45%,rgba(231,189,97,.1),transparent 28%),linear-gradient(145deg,#102333,#061019)}.play-mark{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#1e1809}.watch-info blockquote{margin:18px 0;padding-left:18px;border-left:2px solid var(--gold);font-size:1.32rem}.rtl .watch-info blockquote{padding-left:0;padding-right:18px;border-left:0;border-right:2px solid var(--gold)}.learning-steps{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.learning-steps span{display:inline-flex;align-items:center;gap:8px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03)}.learning-steps b{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:rgba(231,189,97,.14);color:var(--gold-2)}.quiz-section{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.quiz-card{display:grid;gap:18px}.quiz-question h3{margin-bottom:16px}.quiz-question label{display:block;padding:11px 13px;margin:9px 0;border:1px solid var(--line);border-radius:12px;cursor:pointer}.quiz-question input{margin-right:8px}.rtl .quiz-question input{margin-right:0;margin-left:8px}.quiz-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.quiz-actions button{font:inherit;cursor:pointer}.quiz-score{margin-left:auto;font-weight:800;color:var(--gold)}.rtl .quiz-score{margin-left:0;margin-right:auto}.workbook-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.workbook-page{background:#eee4d1;color:#211d17;padding:14px;border-radius:10px;box-shadow:0 22px 55px rgba(0,0,0,.18)}.page-placeholder{min-height:320px;border:1px dashed #b7aa96;display:grid;place-items:center;align-content:center;text-align:center;padding:22px;background:#fffdf8}.page-placeholder span{color:#6b6155;font-size:.9rem;margin-top:10px}.subscriber-panel{margin-top:30px;display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;padding:28px;border:1px solid var(--line);border-radius:22px;background:var(--surface)}.subscriber-icon{width:52px;height:52px;display:grid;place-items:center;border-radius:15px;background:rgba(231,189,97,.12);color:var(--gold)}.subscriber-cta{display:grid;gap:8px}.resource p,.support-box>p{color:var(--muted);margin-top:10px}.support-box{max-width:830px}.bank-box{padding:20px;margin:22px 0;border:1px dashed var(--line);border-radius:16px}.notice{padding:18px;border-left:3px solid var(--gold);background:rgba(231,189,97,.08);border-radius:12px}.rtl .notice{border-left:0;border-right:3px solid var(--gold)}
+.site-footer{padding:38px 0;background:#061720;color:#fff8eb;border-top:1px solid rgba(231,189,97,.2)}html[data-theme="light"] .site-footer{background:#0a2230;color:#fff8eb}.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px;align-items:start}.footer-links{display:flex;flex-wrap:wrap;gap:14px}.footer-links a{color:#d8cfbf}.footer-meta{text-align:right}.rtl .footer-meta{text-align:left}.site-footer p{margin-top:10px;color:#bfb7aa}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}.reveal.is-visible{opacity:1;transform:none}
+@media(max-width:980px){nav{gap:13px}.series-grid,.steps-grid{grid-template-columns:1fr}.preview-row{grid-template-columns:1fr 1fr}.membership-panel{grid-template-columns:1fr}.workbook-preview-grid,.grid-3{grid-template-columns:1fr 1fr}.watch-layout{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.hero-home{min-height:540px}}
+@media(max-width:760px){.menu-btn{display:block;margin-left:auto}.rtl .menu-btn{margin-left:0;margin-right:auto}nav{display:none;position:absolute;top:76px;left:0;right:0;padding:18px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.rtl nav{align-items:flex-end}nav.open{display:flex}.brand{margin-right:0}.rtl .brand{margin-left:0}.nav-tools{margin-left:auto}.rtl .nav-tools{margin-left:0;margin-right:auto}.hero-home{min-height:520px;background-position:62% center}.hero-shade{background:linear-gradient(90deg,rgba(5,19,30,.92),rgba(5,19,30,.72) 70%,rgba(5,19,30,.3))}html[data-theme="light"] .hero-shade{background:linear-gradient(90deg,rgba(255,248,236,.95),rgba(255,248,236,.82) 70%,rgba(255,248,236,.45))}.hero-inner{padding:74px 0 64px}.section-head{display:block}.section-head p{margin-top:14px}.preview-row{grid-template-columns:1fr}.workbook-preview-grid,.grid-2,.grid-3{grid-template-columns:1fr}.subscriber-panel{grid-template-columns:1fr}.episode-header{display:block}.free-pill{margin-top:12px}.footer-grid{grid-template-columns:1fr}.footer-meta{text-align:left}.rtl .footer-meta{text-align:right}}
+
+
+/* v6 compact sizing pass */
+
+
+/* =========================================================
+   v7 HADITH IN MOTION — PREMIUM PRODUCT PAGE
+   ========================================================= */
+.hadith-series-hero{
+  min-height:490px;
+  display:grid;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(7,18,26,.9),rgba(7,18,26,.63) 45%,rgba(7,18,26,.08) 78%),
+    url("images/deen-hero-art.png") center/cover no-repeat;
+  border-bottom:1px solid rgba(231,189,97,.26);
+}
+html[data-theme="light"] .hadith-series-hero{
+  background:
+    linear-gradient(90deg,rgba(249,241,225,.95),rgba(249,241,225,.78) 45%,rgba(249,241,225,.12) 78%),
+    url("images/deen-hero-art.png") center/cover no-repeat;
+}
+.hadith-hero-shade{
+  position:absolute;inset:0;
+  background:radial-gradient(circle at 74% 20%,rgba(231,189,97,.15),transparent 34%);
+  pointer-events:none;
+}
+.hadith-hero-inner{position:relative;z-index:1;padding:78px 0 72px;max-width:850px}
+.hadith-series-mark{display:flex;align-items:center;gap:18px}
+.series-orb{
+  flex:0 0 auto;width:58px;height:58px;border-radius:50%;
+  display:grid;place-items:center;
+  border:1px solid rgba(231,189,97,.58);
+  color:var(--gold-2);
+  font-family:Georgia,serif;font-size:1.1rem;
+  background:rgba(6,24,35,.54);backdrop-filter:blur(9px)
+}
+html[data-theme="light"] .series-orb{background:rgba(255,251,243,.74);color:#916217}
+.hadith-series-hero h1{font-size:clamp(3rem,7vw,6rem);margin-top:9px;letter-spacing:-.04em}
+.premium-steps{margin-top:30px}
+.premium-steps span{background:rgba(7,27,41,.48);backdrop-filter:blur(8px)}
+html[data-theme="light"] .premium-steps span{background:rgba(255,255,255,.67)}
+
+.hadith-film-section{position:relative;background:var(--bg);overflow:hidden}
+.hadith-film-section::before{
+  content:"";position:absolute;inset:0;
+  background:url("images/deen-hero-art.png") 100% 35%/70% auto no-repeat;
+  opacity:.045;pointer-events:none
+}
+.hadith-film-section>.container{position:relative;z-index:1}
+.premium-episode-head h2{max-width:900px}
+.hadith-watch-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(320px,.55fr);gap:24px;align-items:stretch}
+.premium-video{position:relative;min-height:460px;aspect-ratio:auto}
+.video-poster-art{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(5,14,20,.04),rgba(5,14,20,.72)),
+    url("images/ornate-islamic-sunrise-banner.png") center/cover no-repeat;
+}
+.video-poster-content{
+  position:absolute;inset:0;z-index:2;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:34px;color:#fff8eb
+}
+.video-poster-content .film-label{font-size:.72rem;letter-spacing:.17em;color:#f2cf7f;margin-bottom:22px}
+.video-poster-content strong{font-family:Georgia,serif;font-size:clamp(1.5rem,3vw,2.35rem);margin-top:18px}
+.video-poster-content .muted{color:#e2d9ca;max-width:500px;margin-top:8px}
+.hadith-quote-card{
+  padding:30px;border-radius:24px;border:1px solid var(--line);
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.01)),
+    var(--surface);
+  box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:center
+}
+.hadith-quote-card blockquote{
+  font-size:clamp(1.45rem,2.5vw,2.1rem);
+  margin:22px 0;padding-left:18px;border-left:2px solid var(--gold);
+  color:var(--text)
+}
+.rtl .hadith-quote-card blockquote{padding-left:0;padding-right:18px;border-left:0;border-right:2px solid var(--gold)}
+.hadith-quote-card p{color:var(--muted)}
+.hadith-quote-card .actions{margin-top:24px}
+
+.hadith-quiz-band{
+  position:relative;overflow:hidden;
+  background:linear-gradient(180deg,var(--bg-2),var(--bg));
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)
+}
+.hadith-quiz-band::after{
+  content:"";position:absolute;width:440px;height:440px;right:-130px;top:-150px;
+  background:url("images/deen-hero-art.png") center/cover no-repeat;opacity:.055;border-radius:50%
+}
+.hadith-quiz-band>.container{position:relative;z-index:1}
+.hadith-section-head h2{font-size:clamp(2rem,4vw,3.3rem)}
+.premium-quiz{grid-template-columns:repeat(3,1fr);align-items:stretch}
+.premium-quiz .quiz-question{display:flex;flex-direction:column}
+.premium-quiz .quiz-question label{background:rgba(255,255,255,.018)}
+html[data-theme="light"] .premium-quiz .quiz-question label{background:rgba(255,255,255,.5)}
+.premium-quiz .quiz-feedback{margin-top:auto;padding-top:10px;min-height:34px;color:var(--muted)}
+.premium-quiz .quiz-actions{grid-column:1/-1;padding-top:2px}
+
+.hadith-workbook-showcase{
+  background:#f5ecd9;color:#18222b;position:relative;overflow:hidden
+}
+.hadith-workbook-showcase::before,
+.hadith-workbook-showcase::after{
+  content:"";position:absolute;width:310px;height:310px;
+  background:url("images/deen-hero-art.png") center/cover no-repeat;
+  opacity:.13;border-radius:48px
+}
+.hadith-workbook-showcase::before{left:-150px;top:-145px}
+.hadith-workbook-showcase::after{right:-150px;bottom:-150px}
+.hadith-workbook-showcase>.container{position:relative;z-index:1}
+.hadith-workbook-showcase .section-head p{color:#625d54}
+.hadith-preview-row{display:grid;grid-template-columns:1.08fr repeat(3,1fr);gap:16px}
+.hadith-book-cover,.hadith-paper-page{
+  min-height:330px;border-radius:16px;border:1px solid rgba(127,91,29,.18);
+  box-shadow:0 18px 46px rgba(78,57,24,.15)
+}
+.hadith-book-cover{
+  display:flex;flex-direction:column;justify-content:flex-end;padding:26px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.18),rgba(7,18,26,.18)),
+    url("images/deen-hero-art.png") 80% center/cover no-repeat
+}
+.hadith-book-cover .preview-chip{align-self:flex-start;padding:5px 9px;border:1px solid rgba(24,34,43,.24);border-radius:999px;font-size:.72rem}
+.hadith-book-cover strong{font-family:Georgia,serif;font-size:2rem;line-height:1.05;margin-top:14px}
+.hadith-book-cover small{text-transform:uppercase;letter-spacing:.18em;margin-top:8px}
+.hadith-paper-page{background:#fffdf8;padding:24px}
+.paper-kicker{color:#a16e19;font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;font-weight:800}
+.hadith-paper-page h3{font-family:Inter,system-ui,sans-serif;font-size:1rem;margin-top:20px}
+.paper-lines{display:grid;gap:10px;margin-top:13px}.paper-lines i{display:block;height:1px;background:#d8cfbf}.paper-lines.tall{gap:16px}
+.hadith-member-panel{
+  margin-top:32px;display:grid;grid-template-columns:1.15fr .9fr auto;gap:24px;align-items:center;
+  padding:30px;border-radius:24px;
+  background:linear-gradient(135deg,#10384b,#081f2d);
+  color:#fff8eb;border:1px solid rgba(231,189,97,.32);box-shadow:0 24px 65px rgba(44,34,17,.18)
+}
+.hadith-member-panel h2{font-size:clamp(2rem,4vw,3rem);margin-top:8px}
+.hadith-member-panel p{margin-top:10px;color:#d9d0c1}
+.member-benefits{display:grid;gap:9px;color:#eadfce}
+.member-benefits span{font-size:.92rem}
+.hadith-member-panel .subscriber-cta span{font-size:.76rem;color:#cabfae;text-align:center}
+
+.hadith-next-section{
+  position:relative;overflow:hidden;background:var(--bg)
+}
+.hadith-next-section::before{
+  content:"";position:absolute;inset:0;
+  background:url("images/deen-hero-art.png") right center/60% auto no-repeat;opacity:.045
+}
+.hadith-next-section>.container{position:relative;z-index:1}
+.hadith-next-card{
+  min-height:250px;padding:28px;border-radius:22px;border:1px solid var(--line);
+  background:
+    linear-gradient(180deg,rgba(5,15,23,.28),rgba(5,15,23,.94)),
+    url("images/deen-hero-art.png") center/cover no-repeat;
+  color:#fff8eb;box-shadow:var(--shadow)
+}
+.hadith-next-card:nth-child(2){background-position:70% center}
+.hadith-next-card h3{font-size:2rem;margin-top:16px}
+.hadith-next-card p{margin-top:10px;color:#ddd4c5;max-width:520px}
+
+@media(max-width:1000px){
+  .hadith-watch-grid{grid-template-columns:1fr}
+  .premium-quiz{grid-template-columns:1fr}
+  .premium-quiz .quiz-actions{grid-column:auto}
+  .hadith-preview-row{grid-template-columns:1fr 1fr}
+  .hadith-member-panel{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .hadith-series-hero{min-height:430px;background-position:68% center}
+  .hadith-hero-inner{padding:60px 0 52px}
+  .hadith-series-mark{align-items:flex-start}
+  .series-orb{width:48px;height:48px}
+  .hadith-watch-grid{gap:18px}
+  .premium-video{min-height:330px}
+  .hadith-preview-row{grid-template-columns:1fr}
+  .hadith-book-cover,.hadith-paper-page{min-height:280px}
+}
+html,
+body{
+  max-width:100%;
+  overflow-x:hidden;
+}
