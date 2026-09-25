@@ -220,6 +220,92 @@ html[data-theme="light"] .premium-quiz .quiz-question label{background:rgba(255,
 .hadith-next-card:nth-child(2){background-position:70% center}
 .hadith-next-card h3{font-size:2rem;margin-top:16px}
 .hadith-next-card p{margin-top:10px;color:#ddd4c5;max-width:520px}
+.hadith-paper-page{
+  position:relative;
+  overflow:hidden;
+  padding:28px 24px;
+  background:
+    radial-gradient(circle at top right, rgba(212,171,72,.16), transparent 38%),
+    linear-gradient(145deg,#fffaf0 0%,#f5ead3 100%);
+  border:1px solid rgba(176,132,42,.35);
+  border-radius:18px;
+  box-shadow:0 12px 28px rgba(24,34,38,.10);
+	display:flex;
+flex-direction:column;
+}
+
+.hadith-paper-page::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:7px;
+  background:linear-gradient(90deg,#b78423,#efd27a,#b78423);
+}
+
+.hadith-paper-page::after{
+  position:absolute;
+  right:18px;
+  bottom:10px;
+  font-family:Georgia,serif;
+  font-size:58px;
+  font-weight:700;
+  color:rgba(169,126,35,.08);
+  pointer-events:none;
+}
+
+.hadith-paper-page:nth-child(2)::after{
+  content:"5–9";
+}
+
+.hadith-paper-page:nth-child(3)::after{
+  content:"10–14";
+}
+
+.hadith-paper-page:nth-child(4)::after{
+  content:"15+";
+}
+
+.hadith-paper-page .paper-kicker{
+  display:inline-block;
+  margin-bottom:16px;
+  padding:6px 11px;
+  border-radius:999px;
+  background:#102b39;
+  color:#f2c45f;
+  font-size:12px;
+  letter-spacing:.08em;
+  font-weight:700;
+}
+
+.hadith-paper-page h3{
+  margin:0 0 10px;
+  color:#102b39;
+  font-size:22px;
+}
+
+.hadith-paper-page p{
+  position:relative;
+  z-index:1;
+  color:#4f5350;
+  line-height:1.6;
+}
+
+.hadith-paper-page .btn{
+  position:relative;
+  z-index:2;
+  margin-top:18px;
+align-self:flex-start;
+  background:linear-gradient(135deg,#f5ca68,#d9a63d);
+  color:#10212a;
+  border-color:rgba(122,88,20,.25);
+  box-shadow:0 8px 18px rgba(122,88,20,.18);
+}
+
+.hadith-paper-page .btn:hover{
+  transform:translateY(-2px);
+}
 
 @media(max-width:1000px){
   .hadith-watch-grid{grid-template-columns:1fr}
@@ -243,3 +329,17 @@ body{
   max-width:100%;
   overflow-x:hidden;
 }
+@media(max-width:760px){
+  .support-box .panel{
+    padding:18px;
+  }
+
+  .support-box .bank-box{
+    padding:16px;
+    margin:18px 0;
+  }
+
+  .support-box .bank-box strong{
+    line-height:1.35;
+  }
+}s
