@@ -312,7 +312,6 @@ align-self:flex-start;
 }
 
 @media(max-width:1000px){
-  .hadith-watch-grid{grid-template-columns:1fr}
   .premium-quiz{grid-template-columns:1fr}
   .premium-quiz .quiz-actions{grid-column:auto}
   .hadith-preview-row{grid-template-columns:1fr 1fr}
