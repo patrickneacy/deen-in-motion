@@ -126,21 +126,25 @@ html[data-theme="light"] .premium-steps span{background:rgba(255,255,255,.67)}
 .video-poster-content strong{font-family:Georgia,serif;font-size:clamp(1.5rem,3vw,2.35rem);margin-top:18px}
 .video-poster-content .muted{color:#e2d9ca;max-width:500px;margin-top:8px}
 .hadith-quote-card{
-  padding:30px;border-radius:24px;border:1px solid var(--line);
+  padding:22px 24px;
+  border-radius:24px;
+  border:1px solid var(--line);
   background:
     linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.01)),
     var(--surface);
-  box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:center
+  box-shadow:var(--shadow);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
 }
 .hadith-quote-card blockquote{
-  font-size:clamp(1.45rem,2.5vw,2.1rem);
-  margin:22px 0;padding-left:18px;border-left:2px solid var(--gold);
-  color:var(--text)
+  font-size:clamp(1.3rem,1.75vw,1.72rem);
+  line-height:1.08;
+  margin:14px 0 16px;
+  padding-left:14px;
+  border-left:2px solid var(--gold);
+  color:var(--text);
 }
-.rtl .hadith-quote-card blockquote{padding-left:0;padding-right:18px;border-left:0;border-right:2px solid var(--gold)}
-.hadith-quote-card p{color:var(--muted)}
-.hadith-quote-card .actions{margin-top:24px}
-
 .hadith-quiz-band{
   position:relative;overflow:hidden;
   background:linear-gradient(180deg,var(--bg-2),var(--bg));
