@@ -322,8 +322,15 @@ align-self:flex-start;
   .hadith-hero-inner{padding:60px 0 52px}
   .hadith-series-mark{align-items:flex-start}
   .series-orb{width:48px;height:48px}
-  .hadith-watch-grid{gap:18px}
-  .premium-video{min-height:330px}
+ .hadith-watch-grid{
+  grid-template-columns:1fr;
+  gap:18px;
+}
+
+.premium-video{
+  min-height:0;
+  width:100%;
+}
   .hadith-preview-row{grid-template-columns:1fr}
   .hadith-book-cover,.hadith-paper-page{min-height:280px}
 }
