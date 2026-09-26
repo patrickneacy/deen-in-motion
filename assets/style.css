@@ -353,3 +353,57 @@ body{
     line-height:1.35;
   }
 }s
+@media(max-width:520px){
+  .nav{
+    gap:6px;
+  }
+
+  .brand{
+    gap:6px;
+    min-width:0;
+    flex-shrink:1;
+  }
+
+  .brand-emblem{
+    width:30px;
+    height:30px;
+    flex:0 0 30px;
+  }
+
+  .brand-copy strong{
+    font-size:.82rem;
+    white-space:nowrap;
+  }
+
+  .brand-copy span{
+    display:none;
+  }
+
+  .nav-tools{
+    gap:5px;
+    flex-shrink:0;
+  }
+
+  .menu-btn{
+    padding:7px 9px;
+    font-size:.78rem;
+  }
+
+  .lang-switch{
+    padding:7px 8px;
+    font-size:.7rem;
+    white-space:nowrap;
+  }
+
+  .theme-toggle{
+    width:32px;
+    height:32px;
+    flex:0 0 32px;
+  }
+}
+
+@media(max-width:360px){
+  .brand-copy{
+    display:none;
+  }
+}
